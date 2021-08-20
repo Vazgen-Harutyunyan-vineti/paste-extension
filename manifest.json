@@ -1,9 +1,8 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "COI input helper",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "description": "COI values helper tool",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -26,12 +25,14 @@
     "clipboardRead",
     "clipboardWrite",
     "contextMenus",
+    "activeTab",
     "https://*.apps.c3.core.vineti.com/ ; localhost"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "https://*.vineti.com/*",
+        "http://localhost:3000/*"
       ],
       "js": [
         "src/inject/inject.js"
