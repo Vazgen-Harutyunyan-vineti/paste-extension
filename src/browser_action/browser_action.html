@@ -2,6 +2,7 @@
 <style type="text/css">
 	#mainPopup {
 		padding: 5px;
+		padding-top:0;
 		height: 200px;
 		width: 400px;
 		font-family: Helvetica, Ubuntu, Arial, sans-serif;
@@ -14,13 +15,11 @@
 
 <div id="mainPopup">
 	<h1>Vineti manual testing helper</h1>
-	<h2>Please fill in COI label scan value.</h2>
+	<h3>Please fill in COI label scan value, without any additions to code (e.g IDA.DRQMYD.B42.6, not IDA.DRQMYD.B42.6-APH-01).</h3>
 	<h4>This will later be used to autmoatically generate corresponding values on different steps of workflow</h4>
 	<input type="text" id="coi-value">
-	<button><span>Save</span></button><br>
+	<button onclick="saveValue()"><span>Save</span></button><br>
 	<h2>Current saved value: <span id="current-label-scan-value"> </span></h2>
 </div>
 
-<script>
-
-</script>
+<script src="popup.js"></script>
